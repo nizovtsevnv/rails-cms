@@ -1,6 +1,8 @@
 class ApplicationController < ActionController::Base
   respond_to :html
   before_filter :set_locale
+
+  private
   
   def set_locale
     # Set locale from selected source only for existing locales

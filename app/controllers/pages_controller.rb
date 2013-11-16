@@ -22,19 +22,4 @@ class PagesController < ApplicationController
       render '/404', :status => 404
     end
   end
-
-  private
-
-  # Set locale from selected source only for existing locales
-  def set_locale
-    if locale = Locale.find(
-        params[:locale] ||
-        session[:locale] ||
-        request.env['HTTP_ACCEPT_LANGUAGE'].to_s[0, 2].downcase ||
-        I18n.default_locale
-      )
-      I18n.locale = session[:locale] = locale.name
-    end
-  end
-
 end
