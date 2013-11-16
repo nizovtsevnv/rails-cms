@@ -1,0 +1,8 @@
+%p
+  %h3= link_to page.title, "/pages/#{page.name}"
+  %div
+    - if cut = page.body.index('<!-- more -->')
+      = page.body.slice(0, cut).html_safe
+    - else
+      = page.body.html_safe
+

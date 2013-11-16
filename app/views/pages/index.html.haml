@@ -1,0 +1,9 @@
+- content_for :description, @widgets['description']
+- content_for :keywords, @widgets['keywords']
+- content_for :title, @widgets['title']
+
+= paginate @pages
+
+= render @pages
+
+= paginate @pages
