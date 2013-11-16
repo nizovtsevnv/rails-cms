@@ -18,7 +18,7 @@ Installation
 
 5. Configure deployment files in ./config/deploy.rb and ./config/deploy/*
 
-6. Insert an administrator account to database
+6. See the db/seeds.rb for required data
 
 7. Redesign and fill content to site
 
