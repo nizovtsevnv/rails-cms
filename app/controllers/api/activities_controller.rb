@@ -1,10 +1,8 @@
 class Api::ActivitiesController < ApiController
   def index
-    params[:q] ||= {}
-    params[:q][:s] ||= 'updated_at desc'
     @search = Activity.search(params[:q])
-    @data = @search.result.page(params[:page])
-    respond_with @data
+    @data = @search.result.page(params[:page]).per(params[:per])
+    respond_with @data, :total => @search.result.count, :page => params[:page], :per => params[:per]
   end
 
   def show

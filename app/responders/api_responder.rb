@@ -37,6 +37,7 @@ class ApiResponder < ActionController::Responder
     # list of data objects
     elsif resource.is_a?(Array) || resource.is_a?(ActiveRecord::Relation)
       response[:page] = options[:page].nil? ? 1 : options[:page]
+      response[:per] = options[:per].nil? ? resource.size : options[:per]
       response[:total] = options[:total].nil? ? resource.size : options[:total]
       response[:data] = []
       resource.each do |item|
