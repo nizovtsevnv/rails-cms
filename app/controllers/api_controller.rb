@@ -11,8 +11,8 @@ class ApiController < ActionController::Base
   end
 
   def destroy
-    @data ||= model.where(id_column => params[:id])
-    @success ||= !@data.destroy_all.empty?
+    @data ||= model.find_by(id_column => params[:id])
+    @success ||= !@data.destroy.persisted?
     respond_with @success, :success => :resource
   end
 
