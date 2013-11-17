@@ -10,10 +10,10 @@ describe '@data in' do
     'api/users' => {:factory => :user, :routes => [:create, :destroy, :index, :show, :update]}
   }.each do |controller, options|
     options[:id] ||= :id 
-    describe "#{controller}_controller".camelize.safe_constantize do
+    describe "#{controller}_controller".camelize.safe_constantize || controller do
       before(:each){ @object = FactoryGirl.create options[:factory] }
       options[:routes].each do |action|
-        context "#{controller}\##{action} must be" do
+        context "\##{action} must be" do
         case action
         when :create
           # on the input: params hash[factory] = {attribute: value, ...}
