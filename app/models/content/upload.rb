@@ -9,7 +9,7 @@ class Content::Upload < ActiveRecord::Base
     name
   end
 
-  validates :attachment_file_name, :presence => true, :uniqueness => true
+  validates :attachment_file_name, :presence => true
   validates :attachment_file_size, :numericality => {:less_than => 100.megabytes}
   validates :name, :presence => true, :uniqueness => true
 end
