@@ -1,4 +1,6 @@
 class PagesController < ApplicationController
+  before_filter :set_locale
+
   def index
     # Search pages in a list of switched on, has current locale, filtered and ordered by params
     params[:q] ||= {}
