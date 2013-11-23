@@ -1,7 +1,4 @@
-PageNotFoundView = {
-  require: [ '/cms/404' ],
-  link: {
-    'body': '/cms/404',
-    '#route': 'route'
-  }
-}
+PageNotFoundView = [
+  {element: 'body', require: '/cms/404'},
+  {element: '#route', param: 'route'}
+]

@@ -21,13 +21,13 @@ document.createElement = function(node, attributes){
 // Append CSS file with callback on load
 document.loadCSS = function(src, fn){
   var element = document.createElement('link', {type: 'text/css', rel: 'stylesheet', href: src})
-  if(fn){ element.addEventListener('load', fn); }
-  document.head.appendChild(element);
+  if(fn){ element.addEventListener('load', fn) }
+  document.head.appendChild(element)
 }
 
 // Append JS file with callback on load
 document.loadJS = function(src, fn){
   var element = document.createElement('script', {type: 'text/javascript', src: src})
-  if(fn){ element.addEventListener('load', fn); }
-  document.head.appendChild(element);
+  if(fn){ element.addEventListener('load', fn) }
+  document.head.appendChild(element)
 }
