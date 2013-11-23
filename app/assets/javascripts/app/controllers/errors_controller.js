@@ -1,5 +1,5 @@
 ErrorsController = {
   page_not_found: function(params){
-    View.render(PageNotFoundView)
+    View.render(PageNotFoundView, params)
   }
 }
