@@ -13,5 +13,15 @@
  */
 
 body{
+  color: #232323;
+  font-family: sans-serif;
+	font-style: normal;
+	font-variant: small-caps;
+	font-weight: normal;
+	font-size: medium;
+  margin: 0;
+}
+
+.container{
   margin: 1em;
 }
