@@ -4,6 +4,6 @@ class CmsController < ApplicationController
   end
   
   def show_view
-    render params[:view]
+    render params[:view], :layout => false
   end
 end
