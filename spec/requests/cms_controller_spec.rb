@@ -6,8 +6,8 @@ describe 'Visit to the cms' do
       get cms_path
     }
 
-    it 'must render show template' do
-      expect(response).to render_template(:show)
+    it 'must render application template' do
+      expect(response).to render_template(:application)
     end
   end
 end
