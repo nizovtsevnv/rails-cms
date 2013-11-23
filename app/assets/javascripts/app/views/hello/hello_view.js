@@ -1,10 +1,10 @@
 HelloView = {
-  require: [ 'app/assets/hello/hello.html' ],
+  require: [ '/app/assets/hello/hello.html' ],
 
   template: {},
 
   link: {
-    'body': 'app/assets/hello/hello.html',
+    'body': '/app/assets/hello/hello.html',
     '#name': 'name'
   }
 }
